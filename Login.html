@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <script src = "login.js">
+
+    </script>
+    <div class="all">
+      <div class="navbar">
+        <a href="Home.html">Home</a>
+        <div class="header"><h1>Study hard</h1></div>
+        <a class="login" href="Register.html">Register</a>
+      </div>
+      <section>
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <form>
+              <input
+                type="text"
+                id="username"
+                class="fadeIn second"
+                name="username"
+                placeholder="username"
+                value=""
+              />
+              <input
+                type="text"
+                id="password"
+                class="fadeIn third"
+                name="password"
+                placeholder="password"
+                value=""
+              />
+              <input
+                type="button"
+                class="fadeIn fourth"
+                onclick="sendRequest('POST', login_url, {'username': username.value, 'password':password.value})
+              .then(data => localStorage.setItem('token', data.token))
+              .catch(err => console.log(err)), username.value='', password.value=''"
+                value="Log In"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+  </body>
+</html>

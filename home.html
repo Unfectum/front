@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    
+    <div class="all">
+      <div class="navbar">
+        <a href="Home.html">Home</a>
+        <div class="header"><h1>Study hard</h1></div>
+        <p id="header_user"></p>
+      </div>
+<!--      <script>-->
+<!--        const info_url = "http://127.0.0.1:8000/api/account/info/";-->
+<!--        const logout_url = "http://127.0.0.1:8000/api/account/logout/";-->
+<!--  -->
+<!--        function sendRequest(method, request_url, body = null, header) {-->
+<!--          return new Promise((resolve, reject) => {-->
+<!--            const xhr = new XMLHttpRequest();-->
+<!--            xhr.open(method, request_url);-->
+<!--            xhr.responseType = "json";-->
+<!--            xhr.setRequestHeader("Content-type", "application/json");-->
+<!--            if (localStorage.getItem("token")) {-->
+<!--              xhr.setRequestHeader(-->
+<!--                "Authorization",-->
+<!--                "Token " + localStorage.getItem("token")-->
+<!--              );-->
+<!--            }-->
+<!--  -->
+<!--            xhr.onload = () => {-->
+<!--              if (xhr.status >= 400) {-->
+<!--                reject(xhr.response);-->
+<!--              } else {-->
+<!--                resolve(xhr.response);-->
+<!--              }-->
+<!--            };-->
+<!--            xhr.onerror = () => reject(xhr.response);-->
+<!--            xhr.send(JSON.stringify(body));-->
+<!--          });-->
+<!--        }-->
+<!--        sendRequest("GET", info_url).then((data) =>-->
+<!--          (document.getElementById("header_user").innerHTML =-->
+<!--            "Hi, " + data.username)-->
+<!--            //+ '<button onclick="localStorage.setItem("token", ""), window.location = "/home">Logout</button>'-->
+<!--            .catch((err) => console.log(err))-->
+<!--        );-->
+<!--        a = () => {-->
+<!--          if (!localStorage.getItem("token")) {-->
+<!--            document.getElementById("header_user").innerHTML =-->
+<!--              "<a class='login' href='Login.html'>Login</a>";-->
+<!--          }-->
+<!--        };-->
+<!--        a();-->
+<!--      </script>-->
+      <div class="row">
+        <div class="main">
+          <div class="title">
+            <h1>List of all available courses</h1>
+          </div>
+          <div id="Courses" class="courses">
+
+          </div>
+        </div>
+        <div class="side">
+          <div class="card">
+            <h2 style="text-align: center">
+              <a href="EditUser.html">About Me</a>
+            </h2>
+            <h4>Firstname</h4>
+            <h4>Lastname</h4>
+            <h5>Role</h5>
+            <img alt="student_avatar" src="images/student.png" height="230" />
+            <p>Some text will be added later (maybe)</p>
+          </div>
+          <div class="card">
+            <h2 style="text-align: center">
+              <a href="MyCourses.html">My courses</a>
+            </h2>
+            <p>List of courses you are added to</p>
+            <div id="Course" class="course">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src = "home.js"></script>
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+  </body>
+</html>
